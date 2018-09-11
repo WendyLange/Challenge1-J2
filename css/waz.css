@@ -1,0 +1,126 @@
+body {
+	background-color: #333333;
+	font-family: arial, helvetica, times new roman;
+}
+
+
+.news-container {
+	position: relative;
+	width: 400px;
+	max-width: 100%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	padding-left: 30px;
+}
+
+.news-container > h2 {
+	color: white;
+	text-align: center;
+
+}
+
+.news-container > img {
+	width: 100%;
+	border-radius: 20%;
+}
+
+.news-timeline {
+	display: flex;
+	align-items: stretch;
+	margin-left: -30px;
+	position: relative;
+}
+
+/*Dit is de lijn die naast de elementen loopt*/
+.news-timeline_bar {
+	flex: 0 0 auto;
+	width: 6px;
+	margin: 12px;
+	background-color: #FCFAF9;
+}
+
+
+.news-timeline_items {
+	flex: 1 1 auto;
+
+}
+
+.news-timeline_item {
+	margin-left: 15px;
+	background-color: #48E5C2;
+	position: relative;
+	padding: 5px 10px 10px;
+	border-radius: 8px;
+}
+
+/*De bolletje*/
+.news-timeline_item::before {
+	content:'';
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+	box-sizing: border-box;
+	margin-left: -55px;
+	position: absolute;
+	background-color: white;
+	border: 4px white;
+}
+
+/*De driehoekje*/
+.news-timeline_item::after {
+	content: '';
+	position: absolute;
+	right: 100%;
+	top: 5px;
+	border-right: 10px solid #48E5C2;
+	border-top: transparent solid 10px;
+	border-bottom: transparent solid 10px;
+}
+
+
+.article_container {
+	max-width: 100%;
+}
+
+.article_image {
+	width: 100%;
+	border-radius: 20%;
+}
+
+
+@media only screen and (max-width: 360px) {
+	.news-timeline_items {
+		flex: 1 1 auto;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	.news-container {
+		max-width: 700px;
+	}
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+	.news-container {
+		max-width: 1200px;
+	}
+
+	.article_image {
+		width: 40%;
+	}
+
+	.article_content {
+		flex: 1 1 auto;
+		margin-left: 10px;
+	}
+
+	.article-container {
+		align-items: center;
+		display: flex;
+
+	}
+
+
+}
